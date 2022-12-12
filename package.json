@@ -25,12 +25,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/indutny/node-spdy.git"
+    "url": "git+https://github.com/beenotung/node-spdy.git"
   },
-  "homepage": "https://github.com/indutny/node-spdy",
+  "homepage": "https://github.com/beenotung/node-spdy#readme",
   "bugs": {
-    "email": "node-spdy+bugs@indutny.com",
-    "url": "https://github.com/spdy-http2/node-spdy/issues"
+    "url": "https://github.com/beenotung/node-spdy/issues"
   },
   "author": "Fedor Indutny <fedor.indutny@gmail.com>",
   "contributors": [
@@ -39,7 +38,8 @@
     "Ilya Grigorik <ilya@igvita.com>",
     "Roberto Peon",
     "Tatsuhiro Tsujikawa",
-    "Jesse Cravens <jesse.cravens@gmail.com>"
+    "Jesse Cravens <jesse.cravens@gmail.com>",
+    "Beeno Tung <aabbcc1241@yahoo.com.hk>"
   ],
   "dependencies": {
     "debug": "^4.3.4",
