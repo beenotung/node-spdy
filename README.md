@@ -13,6 +13,17 @@ Despite having `spdy` in the module name, it [provides](https://github.com/indut
 
 ## Usage
 
+```typescript
+// import from javascript project
+let spdy = require('spdy-fixes')
+
+// import from typescript project without esModuleInterop flag
+import * as spdy from 'spdy-fixes'
+
+// import from typescript project with esModuleInterop flag
+import spdy from 'spdy-fixes'
+```
+
 ### Examples
 
 Server:
