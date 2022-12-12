@@ -11,3 +11,5 @@ coverage
 npm-debug.log
 *.node
 test.js
+pnpm-lock.yaml
+*.tgz
