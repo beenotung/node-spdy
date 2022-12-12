@@ -1,13 +1,15 @@
 # SPDY Server for node.js
 
-[![NPM version](https://badge.fury.io/js/spdy.svg)](http://badge.fury.io/js/spdy)
+[![npm Package Version](https://img.shields.io/npm/v/spdy-fixes)](https://www.npmjs.com/package/spdy-fixes)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com/)
 
 With this module you can create [HTTP2][0] / [SPDY][1] servers
 in node.js with natural http module interface and fallback to regular https
 (for browsers that don't support neither HTTP2, nor SPDY yet).
 
-This module named `spdy` but it [provides](https://github.com/indutny/node-spdy/issues/269#issuecomment-239014184) support for both http/2 (h2) and spdy (2,3,3.1). Also, `spdy` is compatible with Express.
+This module named `spdy-fixes`, it is a fork from [`spdy`](https://github.com/spdy-http2/node-spdy) to patch some fixes that were hold for a few years in the [pull request](https://github.com/spdy-http2/node-spdy/pull/367) process.
+
+Despite having `spdy` in the module name, it [provides](https://github.com/indutny/node-spdy/issues/269#issuecomment-239014184) support for both http/2 (h2) and spdy (2,3,3.1). Also, `spdy-fixes` is compatible with Express.
 
 ## Usage
 
@@ -15,7 +17,7 @@ This module named `spdy` but it [provides](https://github.com/indutny/node-spdy/
 
 Server:
 ```javascript
-var spdy = require('spdy'),
+var spdy = require('spdy-fixes'),
     fs = require('fs');
 
 var options = {
@@ -56,7 +58,7 @@ server.listen(3000);
 
 Client:
 ```javascript
-var spdy = require('spdy');
+var spdy = require('spdy-fixes');
 var https = require('https');
 
 var agent = spdy.createAgent({
