@@ -74,6 +74,8 @@ describe('SPDY Client', function () {
         server.close(next)
 
         function next () {
+          // flush the pipe to avoid the GET and POST request tests getting stuck
+          process.stdout.write('')
           if (--waiting === 0) {
             done()
           }
