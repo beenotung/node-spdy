@@ -13,3 +13,4 @@ npm-debug.log
 test.js
 pnpm-lock.yaml
 *.tgz
+.nyc_output
