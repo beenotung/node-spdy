@@ -243,6 +243,7 @@ is `true` when the request was processed using HTTP2/SPDY protocols, it is
 * [Roberto Peon](https://github.com/grmocg)
 * [Tatsuhiro Tsujikawa](https://github.com/tatsuhiro-t)
 * [Jesse Cravens](https://github.com/jessecravens)
+* [Beeno Tung](https://github.com/beenotung)
 
 #### LICENSE
 
