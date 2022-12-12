@@ -112,7 +112,7 @@ describe('SPDY Client', function () {
           assert.strictEqual(res.statusCode, 200)
           assert.strictEqual(res.headers.post, 'headers')
 
-          fixtures.expectData(res, 'post body', done)
+          fixtures.expectData(res, 'post body', done, plain)
         })
 
         agent._spdyState.socket.once(plain ? 'connect' : 'secureConnect',

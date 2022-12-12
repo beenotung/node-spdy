@@ -360,7 +360,7 @@ describe('SPDY Server', function () {
         stream.on('response', function (status, headers) {
           assert.strictEqual(status, 200)
 
-          fixtures.expectData(stream, 'hello world, what\'s up?', done)
+          fixtures.expectData(stream, 'hello world, what\'s up?', done, plain)
         })
 
         stream.end()

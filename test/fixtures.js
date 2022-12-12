@@ -52,13 +52,21 @@ exports.keys = {
         '-----END CERTIFICATE-----'
 }
 
-function expectData (stream, expected, callback) {
+function expectData (stream, expected, callback, plain) {
   var actual = ''
 
   stream.on('data', function (chunk) {
     actual += chunk
+    // early terminate the test because the stream in ssl mode will not end
+    // this allows streaming further request with the same network resource
+    if (!plain && actual === expected) {
+      callback()
+    }
   })
   stream.on('end', function () {
+    if (!plain) {
+      return
+    }
     assert.strictEqual(actual, expected)
     callback()
   })
