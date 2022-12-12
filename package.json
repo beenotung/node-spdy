@@ -3,9 +3,14 @@
   "version": "4.0.2",
   "description": "Implementation of the SPDY protocol on node.js.",
   "license": "MIT",
+  "files": [
+    "test",
+    "lib"
+  ],
   "scripts": {
     "lint": "standard",
     "test": "mocha --reporter=spec test/*-test.js",
+    "copy": "cp node_modules/@types/spdy/index.d.ts lib/spdy.d.ts",
     "coverage": "istanbul cover node_modules/.bin/_mocha -- --reporter=spec test/**/*-test.js"
   },
   "pre-commit": [
@@ -41,14 +46,16 @@
     "spdy-transport": "^3.0.0"
   },
   "devDependencies": {
+    "@types/spdy": "^3.4.5",
     "istanbul": "^0.4.5",
     "mocha": "^6.2.3",
+    "npm-run-all": "^4.1.5",
     "pre-commit": "^1.2.2",
     "standard": "^13.1.0"
   },
   "engines": {
     "node": ">=6.0.0"
   },
-  "main": "./lib/spdy",
-  "optionalDependencies": {}
+  "main": "./lib/spdy.js",
+  "types": "./lib/spdy.d.ts"
 }
